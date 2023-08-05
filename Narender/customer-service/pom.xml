@@ -32,6 +32,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -39,6 +40,8 @@
 			<version>4.0.4</version>
 		</dependency>
 
+=======
+>>>>>>> e746b88 (Narender - added new directory and three different services)
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
