@@ -19,14 +19,14 @@ management:
   endpoints:
     jackson:
       isolated-object-mapper: false
-
-    web:
-      exposure:
-        include: info
-
-  info:
-    build:
-      enabled: true
+#
+#    web:
+#      exposure:
+#        include: info
+#
+#  info:
+#    build:
+#      enabled: true
 #spring.jackson.serialization.indent-output=true
 
 

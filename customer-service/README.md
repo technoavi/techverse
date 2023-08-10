@@ -3,7 +3,7 @@ docker image ls
 # build docker image 
 docker build -t customer-service-img .  
 #to run docker image
-docker run -p 9091:9091 -t customer-service-img
+docker run -p 9092:9091 -t customer-service-img
 
 #Mapping port on the host (9091 left) to the port inside Docker (9091)right
 

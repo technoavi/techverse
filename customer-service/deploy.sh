@@ -19,3 +19,6 @@ docker run -d -p 8082:8082 --name my_container "$IMAGE_NAME:$IMAGE_TAG"
 # Optionally, you can remove any old containers with the same name if they exist
 # docker stop my_container
 # docker rm my_container
+
+
+

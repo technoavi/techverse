@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="merchant-service" />
         <module name="fisherman-service" />
+        <module name="fisheriz-config-server" />
         <module name="eureka-server" />
         <module name="customer-service" />
       </profile>
@@ -16,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="customer-service" target="17" />
       <module name="eureka-server" target="17" />
+      <module name="fisheriz-config-server" target="17" />
       <module name="fisherman-service" target="17" />
       <module name="merchant-service" target="17" />
     </bytecodeTargetLevel>
@@ -24,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="customer-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="fisheriz-config-server" options="-parameters" />
       <module name="fisherman-service" options="-parameters" />
       <module name="merchant-service" options="-parameters" />
     </option>
