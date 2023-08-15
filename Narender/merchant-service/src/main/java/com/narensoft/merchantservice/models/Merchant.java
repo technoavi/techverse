@@ -1,4 +1,4 @@
-package com.narensoft.customerservice.models;
+package com.narensoft.merchantservice.models;
 
 
 import jakarta.persistence.*;
@@ -6,14 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="customer")
-public class Customer {
+@Table(name = "merchant")
+public class Merchant {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) //why what happen?
+    @GeneratedValue(strategy = GenerationType.AUTO) //Why what happens?
     @Column(name = "ID")
     private int id;
 
