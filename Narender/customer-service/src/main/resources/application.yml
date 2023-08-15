@@ -1,12 +1,10 @@
 spring:
   application:
     name: customer-service
+  config:
+    import: configserver:http://localhost:8888
 
-server:
-  port: 8081
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
 
+#        git:
+#          uri: https://github.com/naren1996/fiseriz-config-server.git
