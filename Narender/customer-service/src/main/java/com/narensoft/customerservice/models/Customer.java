@@ -1,6 +1,5 @@
 package com.narensoft.customerservice.models;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

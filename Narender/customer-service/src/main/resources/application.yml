@@ -3,8 +3,3 @@ spring:
     name: customer-service
   config:
     import: configserver:http://localhost:8888
-
-
-
-#        git:
-#          uri: https://github.com/naren1996/fiseriz-config-server.git
