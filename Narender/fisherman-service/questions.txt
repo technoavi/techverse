@@ -1,0 +1,1 @@
+1. In FisherMan class how can we make unique combination of phone and name or email-address?
