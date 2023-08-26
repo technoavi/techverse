@@ -7,27 +7,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="merchant-service" />
         <module name="fisherman-service" />
+        <module name="catalogue-service" />
         <module name="fisheriz-config-server" />
-        <module name="eureka-server" />
         <module name="customer-service" />
+        <module name="fz.circuit-breaker" />
+        <module name="merchant-service" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="catalogue-service" target="17" />
       <module name="customer-service" target="17" />
       <module name="eureka-server" target="17" />
       <module name="fisheriz-config-server" target="17" />
       <module name="fisherman-service" target="17" />
+      <module name="fz.circuit-breaker" target="17" />
       <module name="merchant-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="catalogue-service" options="-parameters" />
       <module name="customer-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="fisheriz-config-server" options="-parameters" />
       <module name="fisherman-service" options="-parameters" />
+      <module name="fz.circuit-breaker" options="-parameters" />
       <module name="merchant-service" options="-parameters" />
     </option>
   </component>

@@ -1,33 +1,4 @@
-
 spring:
-  application:
-    name: customer-service
-
-server:
-  port: 8082
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
-
-
-
-management:
-  endpoints:
-    jackson:
-      isolated-object-mapper: false
-#
-#    web:
-#      exposure:
-#        include: info
-#
-#  info:
-#    build:
-#      enabled: true
-#spring.jackson.serialization.indent-output=true
-
-
-
+  application.name: customer-service
+  config:
+    import: configserver:http://localhost:8888

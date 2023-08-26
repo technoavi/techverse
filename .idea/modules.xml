@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TechVerse.iml" filepath="$PROJECT_DIR$/.idea/TechVerse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catalogue-service/catalogue-service.iml" filepath="$PROJECT_DIR$/catalogue-service/catalogue-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer-service/customer-service.iml" filepath="$PROJECT_DIR$/customer-service/customer-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Config-Server/fisheriz-config-server.iml" filepath="$PROJECT_DIR$/Config-Server/fisheriz-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fisheriz-config-server/fisheriz-config-server.iml" filepath="$PROJECT_DIR$/fisheriz-config-server/fisheriz-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fisherman-service/fisherman-service.iml" filepath="$PROJECT_DIR$/fisherman-service/fisherman-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fz.circuit-breaker/fz.circuit-breaker.iml" filepath="$PROJECT_DIR$/fz.circuit-breaker/fz.circuit-breaker.iml" />
       <module fileurl="file://$PROJECT_DIR$/merchant-service/merchant-service.iml" filepath="$PROJECT_DIR$/merchant-service/merchant-service.iml" />
     </modules>
   </component>

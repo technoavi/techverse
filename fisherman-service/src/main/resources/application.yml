@@ -1,14 +1,17 @@
 spring:
-  application:
-    name: fisherman-service
+  application.name: fisherman-service
+  config:
+    import: configserver:http://localhost:8888
 
-server:
-  port: 8082
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
+#server:
+#  port: 8083
+#
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8762/eureka/
 
 
 
