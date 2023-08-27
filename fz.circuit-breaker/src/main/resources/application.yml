@@ -12,25 +12,54 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8762/eureka/
 
-
-
 management:
   endpoints.web.exposure.include:
     - '*'
   endpoint.health.show-details: always
   health.circuitbreakers.enabled: true
 
-resilience4j.circuitbreaker:
-  configs:
-    default:
-      registerHealthIndicator: true
-      slidingWindowSize: 10
-      minimumNumberOfCalls: 5
-      permittedNumberOfCallsInHalfOpenState: 3
-      automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 5s
-      failureRateThreshold: 50
-      eventConsumerBufferSize: 10
+
+resilience4j:
+  retry:
+    retry-aspect-order: 2
+    instances:
+      myRetry:
+        max-attempts: 3
+        wait-duration: 5s
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        retry-exceptions:
+          - org.springframework.web.client.RestClientException
+        ignore-exceptions:
+          - com.technoavi.fz.cb.exception.CircuitException
+  circuitbreaker:
+    circuit-breaker-aspect-order: 1
+    instances:
+      myCircuitBreaker:
+        registerHealthIndicator: true
+        wait-duration-in-open-state: 1m
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-type: count-based
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        sliding-window-size: 5
+        minimum-number-of-calls: 5
+        slow-call-duration-threshold: 10s
+        slow-call-rate-threshold: 60
+        failure-rate-threshold: 60
+        eventConsumerBufferSize: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
