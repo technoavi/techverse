@@ -11,23 +11,24 @@ import lombok.*;
 @Table(name="fish")
 public class Fish {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) //Why what happens?
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Why what happens?
+    @Column(name = "fish_id")
     private Integer fishId;
 
-    @Column(name = "NAME")
+    @Column(name = "fish_name")
     private String name;
 
-    @Column(name = "TYPE")
+    @Column(name = "type")
     private String type;
 
-    @Column(name = "WEIGHT")
+    @Column(name = "weight")
     private Double weight;
 
-    @Column(name = "PRICE")
+    @Column(name = "price")
     private Double price;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "fisherman_Id")
     private Fisherman fisherMan;
+    */
 }

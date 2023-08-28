@@ -8,34 +8,63 @@ import java.util.List;
 
 
 @Getter
-@Setter
+//@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="fisher_man")
+@Table(name = "fisher_man")
 public class Fisherman {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) //Why what happens?
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Why what happens?
+    @Column(name = "fisherman_id")
     private Integer fishermanId;
 
-    @Column(name = "NAME")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "PHONE")
+    @Column(name = "phone")
     private Long phone;
 
-    @Column(name = "LOCATION")
+    @Column(name = "location")
     private String location;
 
-    @Column(name = "ADDRESS")
+    @Column(name = "address")
     private String address;
 
-    @OneToMany(mappedBy = "fisherMan", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @Transient //make the field optional
+    private String fishCount;
+
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "fm_id", referencedColumnName = "fisherman_id")
     private List<Fish> fishList = new ArrayList<>();
-    /*
-    * FetchType.LAZY - It will load the fish data Lazily i.e when fishes data requested via get method.
-    * FetchType.EAGER - It will load the fish data eagerly i.e whenever FisherMan data is requested, corresponding
-     fishes data will also get loaded.
-    * */
+
+    public void setFishermanId(Integer fishermanId) {
+        this.fishermanId = fishermanId;
+    }
+
+    public Fisherman setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Fisherman setPhone(Long phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    public Fisherman setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+
+    public Fisherman setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public Fisherman setFishList(List<Fish> fishList) {
+        this.fishList = fishList;
+        return this;
+    }
 }
