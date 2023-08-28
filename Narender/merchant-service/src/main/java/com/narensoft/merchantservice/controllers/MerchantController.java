@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class MerchantController {
     Logger logger = LoggerFactory.getLogger(MerchantController.class);
     @Autowired
@@ -35,25 +35,25 @@ public class MerchantController {
     }
 
     @GetMapping("/get-merchant/{merchantId}")
-    public ResponseEntity<Merchant> getMerchantById(@PathVariable Integer merchantId) {
+    public ResponseEntity<Merchant> getMerchantById(@PathVariable("merchantId") Integer merchantId) {
         logger.info("getMerchantById method called");
         return new ResponseEntity<>(merchantService.getMerchantById(merchantId), HttpStatus.OK);
     }
 
     @PutMapping("/update-merchant/{merchantId}")
-    public ResponseEntity<Merchant> updateMerchant(@PathVariable Integer merchantId, @RequestBody Merchant merchant) {
+    public ResponseEntity<Merchant> updateMerchant(@PathVariable("merchantId") Integer merchantId, @RequestBody Merchant merchant) {
         logger.info("updateMerchant method called");
         return new ResponseEntity<>(merchantService.updateMerchant(merchantId, merchant), HttpStatus.OK);
     }
 
     @DeleteMapping("/delete-merchant/{id}")
-    public ResponseEntity<String> deleteMerchant(Integer merchantId) {
+    public ResponseEntity<String> deleteMerchant(@PathVariable("id") Integer merchantId) {
         logger.info("deleteMerchant method called");
         return new ResponseEntity<>(merchantService.deleteMerchant(merchantId), HttpStatus.OK);
     }
 
     @GetMapping("/cs-from-ms/{id}")
-    public ResponseEntity<Customer> getCustomerById(@PathVariable int id) {
+    public ResponseEntity<Customer> getCustomerById(@PathVariable("id") int id) {
         logger.info("getCustomerById method called from MerchantController");
         HttpEntity<Customer> customerHttpEntityEntity = new HttpEntity<>(new Customer());
         Customer customer = restTemplate.getForObject("http://localhost:8081/customer/get-customer/1", Customer.class);

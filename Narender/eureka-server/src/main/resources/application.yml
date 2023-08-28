@@ -1,10 +1,13 @@
 spring:
   application:
     name: eureka-server
+#configuration for Spring Boot Admin Client
   boot:
     admin:
       client:
         url: http://localhost:9000/
+
+#configuration for Actuator (Spring Boot Admin require this)
 management:
   endpoints:
     web:
@@ -16,8 +19,10 @@ management:
 server:
   port: 8761
 
+#configuration for Eureka server
 eureka:
   client:
     register-with-eureka: false
-    fetch-registry: false
+
+
 
