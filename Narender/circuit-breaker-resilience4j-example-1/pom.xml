@@ -12,7 +12,7 @@
 	<artifactId>circuit-breaker-resilience4j-example-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>circuit-breaker-resilience4j-example-1</name>
-	<description>circuit-breaker-resilience4j-example-1</description>
+	<description>Circuit Breaker Resilience4j example 1</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
@@ -51,7 +51,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+		</plugins>s
 	</build>
 
 </project>
