@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "fisherman")
+@RequestMapping(path = "/fisherman")
 public class FishermanController {
 
     @Autowired
