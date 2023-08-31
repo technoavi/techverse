@@ -28,6 +28,11 @@ public class FishermanController {
         this.fishermanService = fishermanService;
     }
 
+    @GetMapping("/msg")
+    public String msg(){
+        return "Hello from Fisherman Service";
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Fisherman> createFisherman(@RequestBody Fisherman fisherman) {
         Fisherman fisherman1 = fishermanService.createFisherman(fisherman);
