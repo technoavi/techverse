@@ -44,13 +44,5 @@ public class FishermanController {
 //        Fisherman result = users.orElse(null);
 //        return fishermanRepository.save(result);
 //    }
-    @GetMapping("/add")
-    public String addFish() {
-        Fisherman fm = new Fisherman("avs1", 12100, "h1yd");
-        fm.addFish(new Fishes(1120, "g1old"));
-        fm.addFish(new Fishes(1130, "r1ohu"));
-       fishermanRepository.save(fm);
-        //System.out.println(" fm "+fm.toString());
-        return "fm1";
-    }
+
 }

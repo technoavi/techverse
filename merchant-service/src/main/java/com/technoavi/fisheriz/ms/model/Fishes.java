@@ -35,17 +35,6 @@ public class Fishes implements Serializable {
 
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Fishes fishes = (Fishes) o;
-        return Objects.equals(id, fishes.id) && Objects.equals(rate, fishes.rate) && Objects.equals(type, fishes.type) && Objects.equals(fisherman, fishes.fisherman);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, rate, type, fisherman);
-    }
 
 }

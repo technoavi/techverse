@@ -3,8 +3,8 @@ spring:
   config:
     import: configserver:http://localhost:8888
 
-#server:
-#  port: 8083
+server:
+  port: 8083
 #
 #eureka:
 #  client:

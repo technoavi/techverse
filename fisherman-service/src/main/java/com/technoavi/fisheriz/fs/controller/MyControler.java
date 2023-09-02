@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @RestController
 public class MyControler {
@@ -14,22 +15,40 @@ public class MyControler {
     RestTemplate restTemplate;
 
 
-//    @GetMapping("/gt")
-//    public String getMSGfromCS(){
-//
-//        String uri="msg";
-//       String res= restTemplate.getForObject("http://localhost:8082/msg", String.class);
-//
-//       return "from Customer service -"+res;
-//    }
+
+    @Autowired
+    WebClient.Builder builder;
+
+
+    @GetMapping("/gt")
+    public String getMSGfromCS(){
+
+
+       String res= restTemplate.getForObject("http://numbersapi.com/54", String.class);
+
+       return "from Customer service -"+res;
+    }
 
 
     @GetMapping("/ft")
 
     public String getMSGmCS(){
-
+        System.out.println("getMSGmCS invoked!! ");
 
         return "from Fisherman service";
     }
 
+    //http://numbersapi.com/40
+    @GetMapping("/num")
+    public String getNum(){
+
+        String res=  builder.build().get().
+                uri("http://numbersapi.com/40")
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
+
+
+       return "response from other api - "+res;
+    }
 }
