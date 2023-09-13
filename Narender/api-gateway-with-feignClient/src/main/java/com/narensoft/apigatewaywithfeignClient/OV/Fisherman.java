@@ -2,8 +2,6 @@ package com.narensoft.apigatewaywithfeignClient.OV;
 
 import lombok.*;
 
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

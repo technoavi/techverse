@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ONETOONE-UNIDIRECTIONAL
+  datasource:
+    url: jdbc:mysql://localhost:3306/onetoone_uni?createDatabaseIfNotExist=true
+    username: root
+    password: Naren@123
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true

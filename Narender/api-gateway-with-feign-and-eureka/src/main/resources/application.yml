@@ -1,7 +1,14 @@
+server:
+  port: 8089
+
 spring:
   application:
     name: api-gateway-3
-
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
 
 eureka:
   client:

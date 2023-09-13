@@ -16,8 +16,6 @@ public interface FishermanClient {
     @GetMapping("/msg")
     public String msg();
 
-
-
     @PostMapping("/create")
     public ResponseEntity<Fisherman> createFisherman(@RequestBody Fisherman fisherman);
 

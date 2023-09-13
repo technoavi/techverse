@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: api-gateway-2
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
